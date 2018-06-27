@@ -11,7 +11,11 @@
 	body a,span,p{
 		text-decoration: none;		
 		font-family:"微软雅黑";
+        
 	}
+    body{
+        overflow:scroll;
+    }
 	ul{
 		list-style:none;
 		margin: 0;
@@ -479,7 +483,7 @@
   				<div style="clear:both"></div>
 	</ul>
  </div>
-
+<div style="width:100%;min-width:1346px;">
 <div class="contain">
    <!--焦点图-->
 	<div id="top-main">
@@ -585,9 +589,9 @@
    	<div style="margin-top:20px;height:200px;position:relative;"> 
    			<div style="width:260px;height:150px;background-color:#F8F8F8;position:absolute;left:10px;top:30px;"> 
                  <div style="width:254px;height:40px;margin-top:3px;margin-left:3px;background-color:#CCE1CE;padding-top:8px;"> 
-                    <span style="color:#026707;font-size:20px;margin-left:3px;">13年的今天</span>
-                    <p style="color:#026707;font-size:20px;margin-top:20px;">06.24</p>
-                    <p style="color:#000;font-size:20px;margin-top:20px;">镇魂完结已经85天</p>
+                    <span style="color:#026707;font-size:20px;margin-left:3px;">今日头条</span>
+                    <p style="color:#026707;font-size:20px;margin-top:20px;" id="timeNow">06.27</p>
+                    <p style="color:#000;font-size:20px;margin-top:20px;" id="wordNow">镇魂今日更新了！！！</p>
                  </div> 
    			</div>             
             <div style="width:610px;height:200px;display:inline-block;position:absolute;left:350px;top:0;">
@@ -598,7 +602,7 @@
               </div>
            	  <div style="position:relative;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.24<span> 
+           	     <span style="color:#117317;" id="time1">06.27<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校今年高考报名人数增长迅猛，其中生物科技学院生物工程专业以134.8%的增长率高居全国榜首</p>
@@ -606,7 +610,7 @@
            	  </div>
            	  <div style="position:relative;top:55px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.23<span> 
+           	     <span style="color:#117317;" id="time2">06.26<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校1号楼教学楼旧址今日挖掘出神秘人古墓，墓中发现大量一丝昆仑君神话故事集孤本，这些孤本据考古学家衡量，价值不可估量</p>
@@ -614,7 +618,7 @@
            	  </div>
            	  <div style="position:relative;top:110px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.22<span> 
+           	     <span style="color:#117317;" id="time3">06.25<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校已于今日开展"宣扬传统文化、用我的经历来讲述神话故事给你听"的主题宣传活动</p>
@@ -648,15 +652,15 @@
               </div>
            	  <div style="position:relative;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.24<span> 
+           	     <span style="color:#117317;" id="time4">06.27<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
-                  <p>距离《镇魂》下次更新还有三天，镇魂女（男）孩（鬼）们纷纷表示非常绝望，还好主演们历史素材丰富，稳住了他们</p>
+                  <p>镇魂今日更新，请镇魂女（男）孩们按时下班下课，及时查看更新，并清空脑子里的表情包，以免错过全世界</p>
            	     </div>
            	  </div>
            	  <div style="position:relative;top:55px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.23<span> 
+           	     <span style="color:#117317;" id="time5">06.26<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>都市悬疑探案据《镇魂》自从6月13号登录龙城卫视黄金档，优酷18:00独家同步放送以来，迅速席卷全球，热度高居不下</p>
@@ -664,7 +668,7 @@
            	  </div>
            	  <div style="position:relative;top:110px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;">06.22<span> 
+           	     <span style="color:#117317;" id="time6">06.25<span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>龙城近几天频现路人边走边看着傻笑，是莫名灵异事件还是情有可原，所幸没有造成事故，还是提心大家要小心手机不要被玩坏</p>
@@ -762,6 +766,6 @@
 		<p class="copy"><a class="chen" href="http://www.miibeian.gov.cn/" target="_blank">龙ICP备666666666号</a></p>
 	</div>
 </div>
-
+</div>
 </body>
 </html>
