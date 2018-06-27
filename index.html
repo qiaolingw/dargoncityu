@@ -362,6 +362,7 @@
 	.wrod_zh_block {color:#026707;width:100px;margin-left:25px;}
 	.wrod_zh_block p{margin-top:4px;}
 	</style>
+	
 </head>
 <body>
 
@@ -590,8 +591,8 @@
    			<div style="width:260px;height:150px;background-color:#F8F8F8;position:absolute;left:10px;top:30px;"> 
                  <div style="width:254px;height:40px;margin-top:3px;margin-left:3px;background-color:#CCE1CE;padding-top:8px;"> 
                     <span style="color:#026707;font-size:20px;margin-left:3px;">今日头条</span>
-                    <p style="color:#026707;font-size:20px;margin-top:20px;" id="timeNow">06.27</p>
-                    <p style="color:#000;font-size:20px;margin-top:20px;" id="wordNow">镇魂今日更新了！！！</p>
+                    <p style="color:#026707;font-size:20px;margin-top:20px;" id="timeNow"></p>
+                    <p style="color:#000;font-size:20px;margin-top:20px;" id="wordNow"></p>
                  </div> 
    			</div>             
             <div style="width:610px;height:200px;display:inline-block;position:absolute;left:350px;top:0;">
@@ -602,7 +603,7 @@
               </div>
            	  <div style="position:relative;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time1">06.27<span> 
+           	     <span style="color:#117317;" id="time1"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校今年高考报名人数增长迅猛，其中生物科技学院生物工程专业以134.8%的增长率高居全国榜首</p>
@@ -610,7 +611,7 @@
            	  </div>
            	  <div style="position:relative;top:55px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time2">06.26<span> 
+           	     <span style="color:#117317;" id="time2"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校1号楼教学楼旧址今日挖掘出神秘人古墓，墓中发现大量一丝昆仑君神话故事集孤本，这些孤本据考古学家衡量，价值不可估量</p>
@@ -618,7 +619,7 @@
            	  </div>
            	  <div style="position:relative;top:110px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time3">06.25<span> 
+           	     <span style="color:#117317;" id="time3"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>我校已于今日开展"宣扬传统文化、用我的经历来讲述神话故事给你听"的主题宣传活动</p>
@@ -652,15 +653,15 @@
               </div>
            	  <div style="position:relative;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time4">06.27<span> 
+           	     <span style="color:#117317;" id="time4"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
-                  <p>镇魂今日更新，请镇魂女（男）孩们按时下班下课，及时查看更新，并清空脑子里的表情包，以免错过全世界</p>
+                  <p id="wordBg"></p>
            	     </div>
            	  </div>
            	  <div style="position:relative;top:55px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time5">06.26<span> 
+           	     <span style="color:#117317;" id="time5"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>都市悬疑探案据《镇魂》自从6月13号登录龙城卫视黄金档，优酷18:00独家同步放送以来，迅速席卷全球，热度高居不下</p>
@@ -668,7 +669,7 @@
            	  </div>
            	  <div style="position:relative;top:110px;"> 
            	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
-           	     <span style="color:#117317;" id="time6">06.25<span> 
+           	     <span style="color:#117317;" id="time6"><span> 
            	     </div>
            	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
                   <p>龙城近几天频现路人边走边看着傻笑，是莫名灵异事件还是情有可原，所幸没有造成事故，还是提心大家要小心手机不要被玩坏</p>
@@ -768,4 +769,41 @@
 </div>
 </div>
 </body>
+<SCRIPT type=text/javascript>
+	function init() {// 初始化内容
+		var today = new Date();
+		var day1 = new Date(today.getTime()-24*60*60*1000);
+		var day2 = new Date(today.getTime()-2*24*60*60*1000);
+		var month=today.getMonth()+1;//0-11 0为1月
+		var day=today.getDate(); //1-31
+		var week=today.getDay(); //0代表星期天
+		var weekend = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];  
+		var curYmd=month+"/"+day;
+		var curWeek=weekend[week];
+
+		var month1=day1.getMonth()+1; 
+		var day1=day1.getDate();
+		var ymd1=month1+"/"+day1;
+
+		var month2=day2.getMonth()+1; 
+		var day2=day2.getDate();
+		var ymd2=month2+"/"+day2;
+		$("#timeNow").text(curYmd+" "+curWeek);
+		$("#time1").text(curYmd);
+		$("#time2").text(ymd1);
+		$("#time3").text(ymd2);
+		$("#time4").text(curYmd);
+		$("#time5").text(ymd1);
+		$("#time6").text(ymd2);
+		if(week==2||week==3){
+			$("#wordNow").text("镇魂今日更新了！！！");
+			$("#wordBg").text("镇魂今日更新，请镇魂女（男）孩们按时下班下课，及时查看更新，并清空脑子里的表情包，以免错过全世界");
+
+		}else{
+			$("#wordNow").text("镇魂今日没有更新，暴躁");
+			$("#wordBg").text("《镇魂》不更新的日子，镇魂女（男）孩（鬼）们纷纷表示非常绝望，还好主演们历史素材丰富，稳住了他们");
+		}   
+   }
+   init();
+    </SCRIPT>
 </html>
